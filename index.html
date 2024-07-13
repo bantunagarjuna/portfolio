@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Bantu Nagarjuna</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <div class="menu-icon" id="menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul id="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-text">
+      <p>Tech Guy</p>
+      <h1>Hi, I'm Nagarjuna Bantu</h1>
+    </div>
+  </div>
+
+
+  <!-- ---------------------about--------------- -->
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <!-- <img src="Images/4.2.jpg"  alt=""> -->
+        <!-- <h1>About Me</h1> -->
+        <div class="about-col-1">
+          <img src="Images/4.2.jpg" alt="" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I'm Nagarjuna Bantu Research & Development Engineer and IoT
+            researcher and developer with hands-on experience in real-time
+            monitoring systems and a passion for clean code, I create
+            Innovative solutions. Lets build something amazing together!
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">
+              Skills
+            </p>
+            <p class="tab-links" onclick="opentab('experience')">
+              Experience
+            </p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>IoT</span><br />Developer</li>
+              <li><span>Computer Networking</span><br />Designer</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>R&D Engineer</span><br />at Networking Company</li>
+              <li><span>IoT Research Intern</span><br />at IIT KHARAGPUR</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>2024</span><br />Bacholers of Technology in Electronics
+                & Communication
+              </li>
+              <li><span>2020</span><br />12th Class</li>
+              <li><span>2018</span><br />10th Class</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  <!-- --------------------services------------------- -->
+  <div id="services">
+    <h1 class="main-title">Services</h1>
+    <div class="container-1">
+      <div class="service-card">
+        <div class="services-list">
+          <h2>IoT Development</h2>
+          <u>
+            <p>Boards:</p>
+          </u>
+          <p>ESP32, ESP8266, Raspberry Pi, Arduino UNO & Arduino Nano</p>
+          <u>
+            <p>Protols:</p>
+          </u>
+          <p>UART, SPI, I2C, MQTT, HTPP, MESH</p>
+          <u>
+            <p>Sensors:</p>
+          </u>
+          <p>DHT11, DHT22, Gas Sensor, GPS, Ultrosonic Sensor, Pressure Sensor</p>
+          <u>
+            <p>PlatForms:</p>
+          </u>
+          <p>Arudino IDE, Thonny IDE</p>
+        </div>
+        <img src="iot.svg" alt="" />
+      </div>
+
+      <div class="service-card">
+        <div class="services-list">
+          <h2>Networking Solutions</h2>
+          <u>
+            <p>Routing:</p>
+          </u>
+          <p>Static Routing, OSPF</p>
+          <u>
+            <p>Switching:</p>
+          </u>
+          <p>VLSM</p>
+          <u>
+            <p>Others:</p>
+          </u>
+          <p>Sub-Netting(FLSM, VLSM), NAT, DNS, DHCP</p>
+        </div>
+        <img src="networking.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------------------portfolio--------------- -->
+
+  <div id="portfolio">
+    <h1 class="portfolio-title">Portfolio</h1>
+    <div class="portfolio-container">
+      <div class="portfolio-card-1">
+        <div class="portfolio-card-content">
+          <h2 class="portfolio-project-title">Secure-Access-Point-for-Local-Area-Networks</h2>
+          <p class="portfolio-project-description">The essence of this project is to establish a wireless access point
+            tailored for small network environments, with a strong on secure connectivity and file sharing capabilities.
+            The initiative is driven by the need for robust security</p>
+          <a href="https://github.com/bantunagarjuna/Secure-Access-Point-for-Local-Area-Networks"
+          class="portfolio-card-link"><img src="link.svg" <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-card-2">
+        <div class="portfolio-card-content">
+          <h2 class="portfolio-project-title">Smart-Garbage-Monitoring-System</h2>
+          <p class="portfolio-project-description">The working of a smart dustbin is based on a combination of various
+            sensors and technologies to monitor and manage waste more efficiently. The device allows setting an alarm
+            with the details of the geographical location and the quantity of the waste present in the dustbin.</p>
+          <a href="https://github.com/bantunagarjuna/Smart-Garbage-Monitoring-System-using-Internet-of-Things"
+            class="portfolio-card-link"><img src="link.svg" <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-card-3">
+        <div class="portfolio-card-content">
+          <h2 class="portfolio-project-title">Serial Communication between two Embedded Devices</h2>
+          <p class="portfolio-project-description">Raspberry Pi is employed as a server for data storage, utilizing an
+            Arduino board as the input interface to the Raspberry Pi server via the Universal Asynchronous
+            Receiver/Transmitter(UART) serial communication protocol.</p>
+          <a href="#" class="portfolio-card-link"><img src="link.svg" <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------contact---------------------- -->
+
+  <main id="contact" >
+    <div class="left">
+      <h2 style="color: white;">Social Media</h2>
+      <ul>
+        <li><a href="https://discord.com/channels/@me" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="https://www.instagram.com/bantu0022?igsh=OHh1NHE5dDNmZnV2" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/bantu-nagarjuna/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+      </ul>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:bantunagarjuna2@gmail.com"><i class="fas fa-envelope"></i> Email Us</a></li>
+        <li><a href="tel:+919346214685"><i class="fas fa-phone"></i> Call Us</a></li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <h2>Contact Us</h2>
+      <form name="submit-to-google-sheet">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="Message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <span id="msg"></span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxvbksOdUARMNT5c9PjNtt-1AxiC_zhA3tghO5iSe7yUyYPL3TNPk5BCJ5Vvy-PvkYB/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message sent successfully"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+
+</html>

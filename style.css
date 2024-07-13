@@ -1,0 +1,535 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    color: #fff;
+    
+}
+
+/* Existing CSS */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/3.0.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 0;
+    margin-right: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    right: 0%;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    margin-left: 60%;
+    font-size: 25px;
+}
+
+/* Responsive CSS */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        background-image: url(Images/phone_1.2.png);
+        background-position: center;
+    }
+
+    .container {
+        justify-content: space-between;
+        margin-right: 0;
+    }
+
+    nav {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    nav ul.show {
+        height: 30vh;
+    }
+
+    .header-text {
+        margin: 0;
+        position: absolute;
+        bottom: 90px;
+        left: 60%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #000000;
+    }
+
+    .header-text p{
+        font-size: 38px;
+    }
+}
+
+/* -------------------about------------------- */
+
+#about{
+    padding: 5px 0px;
+    color: #ababab;
+    margin-top: 0%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+.about-col-1{
+    margin-right: 10px;
+    flex-basis: 20%;
+}
+.about-col-2{
+    flex-basis: 72%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 80%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #ff004f;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    .about-col-1 img{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+/* -----------------services-------------- */
+
+#services {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text color */
+    padding: 0px 0;
+    padding-bottom: 20px;
+}
+
+.main-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.container-1 {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Align items with space between them */
+    padding-left: 20px; /* Adjust as needed */
+    padding-right: 20px; /* Adjust as needed */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f11515; /* Initial card background color */
+    color: #ffffff; /* White text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for subtle elevation */
+    border-radius: 8px;
+    width: calc(50% - 20px); /* 50% width minus padding for two cards */
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease; /* Transition for transform, background-color, and box-shadow */
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.service-card:hover {
+    transform: translateY(-15px); /* Move card up by 15px on hover */
+    background-color: #e90c0c; /* Change background color on hover */
+    box-shadow: 0 8px 16px rgba(167, 162, 162, 0.4); /* Increase shadow size on hover */
+}
+
+.service-card img {
+    width: 100px;
+    margin-left: auto;
+}
+
+.services-list {
+    margin-top: 20px;
+}
+
+.services-list h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.services-list p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive CSS for small screens */
+@media screen and (max-width: 768px) {
+    .container-1 {
+        flex-direction: column; /* Stack service cards vertically */
+        align-items: center; /* Center-align service cards */
+    }
+
+    .service-card {
+        width: 100%; /* Full width of the container */
+        max-width: 600px; /* Maximum width for each card */
+        margin: 10px 0; /* Vertical spacing between cards */
+    }
+} 
+
+/* --------------portfolio---------------- */
+
+#portfolio {
+    background-color: #000000; /* Black background */
+    padding: 40px;
+    text-align: center;
+}
+
+.portfolio-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+}
+
+.portfolio-card-1, .portfolio-card-2, .portfolio-card-3 {
+    background-color: #646464; /* Background color */
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    width: 300px; /* Fixed width for larger screens */
+    margin: 20px; /* Margin for spacing between cards */
+}
+
+.portfolio-card-1:hover, .portfolio-card-2:hover, .portfolio-card-3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-card-1 {
+    background-image: url(Images/project-1.1.png);
+}
+
+.portfolio-card-2 {
+    background-image: url(Images/project2.1.png);
+}
+
+.portfolio-card-3 {
+    background-image: url(Images/project-3.1.png);
+}
+
+.portfolio-card-content {
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    background-color: #ffffff; /* Background color for content */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.portfolio-card-content:hover {
+    opacity: 1;
+}
+
+.portfolio-project-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.portfolio-project-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.portfolio-card-link {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.portfolio-card-link i {
+    margin-left: 5px;
+}
+
+.portfolio-card-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive CSS for small screens */
+@media screen and (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center-align cards */
+    }
+
+    .portfolio-card-1, .portfolio-card-2, .portfolio-card-3 {
+        width: 100%; /* Full width of the container */
+        max-width: 600px; /* Maximum width for each card */
+        margin: 10px 0; /* Vertical spacing between cards */
+    }
+}
+
+  /* -----------------contact-------------- */
+
+  main {
+    display: flex;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: auto;
+    flex-wrap: wrap; /* Allows flex items to wrap on smaller screens */
+}
+
+.left {
+    width: 25%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left ul li {
+    margin: 10px 0;
+}
+
+.left ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.left ul li a i {
+    margin-right: 10px;
+}
+
+.left h2 {
+    margin-top: 20px;
+}
+
+.left h2:first-of-type {
+    margin-top: 0;
+}
+
+.right {
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+.right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right form label {
+    margin-top: 10px;
+}
+
+.right form input,
+.right form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.right form button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.right form button:hover {
+    background-color: #555;
+}
+
+/* Responsive CSS for small screens */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        width: 100%;
+        padding: 10px;
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .left, .right {
+        width: 100%; /* Full width for both sections */
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .left ul li a {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right form {
+        width: 100%;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .right h2 {
+        color: #ffffff;
+    }
+}
+
+#msg{
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -----------------------for phone----------------- */
